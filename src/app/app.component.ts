@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
-}
+  nombre: string = 'Capitan America';
+  arreglo:any[] = [1,2,3,4,5,6,7,8,9,10];
+  PI = Math.PI;
+  porcentaje = 0.234;
+  salario = 123;
+  fecha:Date = new Date();
+  
+  valorPromesa = new Promise<string>((resolve)=> {
+    setTimeout(()=> {
+      resolve("Data Received");
+    }, 3500);
+  });
+
+  heroe = {
+    nombre:'Logan',
+    clave:'Wolwerine',
+    edad:500,
+    direccion: {
+      calle:'Avenida Siempre Viva',
+      casa:20
+    }
+  }
+} 
