@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,7 @@ export class AppComponent {
   salario = 123;
   fecha:Date = new Date();
   
-  valorPromesa = new Promise<string>((resolve)=> {
-    setTimeout(()=> {
-      resolve("Data Received");
-    }, 3500);
-  });
+  valorPromesa = of('Data in promise')
 
   heroe = {
     nombre:'Logan',
@@ -28,4 +25,5 @@ export class AppComponent {
       casa:20
     }
   }
+  
 } 
